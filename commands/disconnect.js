@@ -48,7 +48,7 @@ module.exports = {
       if (!member.voice.channel)
         return client.sendTime(
           interaction,
-          "❌ | **You must be in a voice channel to use this command.**"
+          "❌ | **Kaba tu masuk kuday ke voice channel ce mangke pacak mutar lagu tu .**"
         );
       if (
         guild.me.voice.channel &&
@@ -63,7 +63,7 @@ module.exports = {
       if (!player)
         return client.sendTime(
           interaction,
-          "❌ | **Nothing is playing right now...**"
+          "❌ | **Katek lagu yang diputau ce putar kuday **"
         );
       player.destroy();
       client.sendTime(interaction, ":notes: | **Disconnected!**");

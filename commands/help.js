@@ -33,11 +33,11 @@ module.exports = {
       .setFooter(
         `To get info of each command type ${
           GuildDB ? GuildDB.prefix : client.botconfig.DefaultPrefix
-        }help [Command] | Have a nice day!`
+        }help [Command] | Semoga sehat sehat saje kaba ni amin`
       ).setDescription(`${Commands.join("\n")}
   
   Discord Music Bot Version: v${require("../package.json").version}
-[Dashboard](${client.botconfig.Website}) | By [GaeulIbniRabain](https://www.instagram.com/m_marwanir23/)`);
+[Dashboard](${client.botconfig.Website}) | By [pacarnyaGaeul](https://www.instagram.com/m_marwanir23/)`);
     if (!args[0]) message.channel.send(Embed);
     else {
       let cmd =
@@ -46,7 +46,7 @@ module.exports = {
       if (!cmd)
         return client.sendTime(
           message.channel,
-          `❌ | Unable to find that command.`
+          `❌ | Gaada command nya dekkk.`
         );
 
       let embed = new MessageEmbed()
@@ -132,7 +132,7 @@ module.exports = {
         if (!cmd)
           return client.sendTime(
             interaction,
-            `❌ | Unable to find that command.`
+            `❌ | Gaada command nya dekkk.`
           );
 
         let embed = new MessageEmbed()

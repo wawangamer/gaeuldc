@@ -23,7 +23,7 @@ module.exports = {
     if (!player)
       return client.sendTime(
         message.channel,
-        "❌ | **Nothing is playing right now...**"
+        "❌ | **Katik yang diputar bangai**"
       );
 
     if (!player.queue || !player.queue.length || player.queue === 0) {
@@ -74,7 +74,7 @@ module.exports = {
         .setAuthor("Queue", client.botconfig.IconURL)
         .setColor(client.botconfig.EmbedColor)
         .setDescription(
-          `**Currently Playing:** \n[${player.queue.current.title}](${player.queue.current.uri}) \n\n**Up Next:** \n${SongsDescription}\n\n`
+          `**Sekarang lagi mutau lagu tini:** \n[${player.queue.current.title}](${player.queue.current.uri}) \n\n**Up Next:** \n${SongsDescription}\n\n`
         )
         .addField("Total songs: \n", `\`${player.queue.totalSize - 1}\``, true)
         .addField(
@@ -84,7 +84,7 @@ module.exports = {
           })}\``,
           true
         )
-        .addField("Requested by:", `${player.queue.current.requester}`, true)
+        .addField("lagu tini dirikues oleh::", `${player.queue.current.requester}`, true)
         .addField(
           "Current song duration:",
           `${
@@ -132,17 +132,17 @@ module.exports = {
       if (!player)
         return client.sendTime(
           interaction,
-          "❌ | **Nothing is playing right now...**"
+          "❌ | **Katik yang diputar bangai**"
         );
 
       if (!player.queue || !player.queue.length || player.queue === 0) {
         let QueueEmbed = new MessageEmbed()
-          .setAuthor("Currently playing", client.botconfig.IconURL)
+          .setAuthor("Sekarang lagi mutau lagu tini", client.botconfig.IconURL)
           .setColor(client.botconfig.EmbedColor)
           .setDescription(
             `[${player.queue.current.title}](${player.queue.current.uri})`
           )
-          .addField("Requested by", `${player.queue.current.requester}`, true)
+          .addField("lagu tini dirikues oleh:", `${player.queue.current.requester}`, true)
           .addField(
             "Duration",
             `${
