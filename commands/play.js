@@ -61,7 +61,7 @@ module.exports = {
     if (!player)
       return client.sendTime(
         message.channel,
-        "❌ | **Nothing is playing right now...**"
+        "❌ | **Katik yang kaba putar lagu tuh ce..**"
       );
 
     if (player.state != "CONNECTED") await player.connect();
