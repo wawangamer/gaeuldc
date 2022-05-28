@@ -21,14 +21,14 @@ module.exports = {
     if (!message.member.voice.channel)
       return client.sendTime(
         message.channel,
-        "❌ | **You must be in a voice channel use this command**"
+        "❌ | **Masuk kuday ke voice channel dek**"
       );
     if (!player)
       return client.sendTime(
         message.channel,
-        "❌ | **Nothing is playing right now...**"
+        "❌ | **Katik yang diputar sekarang...**"
       );
-    await client.sendTime(message.channel, ":notes: | **Disconnected!**");
+    await client.sendTime(message.channel, ":notes: | **Lagu kaba lah teputus lanjutt dek**");
     await message.react("✅");
     player.destroy();
   },
@@ -56,7 +56,7 @@ module.exports = {
       )
         return client.sendTime(
           interaction,
-          `❌ | **You must be in ${guild.me.voice.channel} to use this command.**`
+          `❌ | **Kaba tu nak masuk ke chennel ini kuday ${guild.me.voice.channel} mangke pacak make commandnye.**`
         );
 
       let player = await client.Manager.get(interaction.guild_id);
@@ -66,7 +66,7 @@ module.exports = {
           "❌ | **Katek lagu yang diputau ce putar kuday **"
         );
       player.destroy();
-      client.sendTime(interaction, ":notes: | **Disconnected!**");
+      client.sendTime(interaction, ":notes: | **Lagu kaba lah di-diskonek kah dek lanjutt**");
     },
   },
 };
