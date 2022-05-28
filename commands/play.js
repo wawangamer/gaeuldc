@@ -39,7 +39,7 @@ module.exports = {
         `**Usage - **\`${GuildDB.prefix}play [song]\``
       );
     let CheckNode = client.Manager.nodes.get(client.botconfig.Lavalink.id);
-    let Searching = await message.channel.send(":mag_right: Searching...");
+    let Searching = await message.channel.send(":mag_right: Kuday dang dicari lagu kaba tu...");
     if (!CheckNode || !CheckNode.connected) {
       return client.sendTime(
         message.channel,
@@ -112,7 +112,7 @@ module.exports = {
           //SongAddedEmbed.addField("Duration", `\`${prettyMilliseconds(Searched.tracks[0].length, { colonNotation: true })}\``, true);
           if (player.queue.totalSize > 1)
             SongAddedEmbed.addField(
-              "Position in queue",
+              "Lagu di urutan:",
               `${player.queue.size - 0}`,
               true
             );
